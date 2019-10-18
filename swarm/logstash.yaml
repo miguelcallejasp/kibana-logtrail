@@ -1,0 +1,23 @@
+version: '3.3'
+
+networks:
+  logs:
+    driver: overlay
+    attachable: true
+
+configs:
+  logstash:
+    file: ./logstash.conf
+
+services:
+  logstash:
+    ports:
+      - 5044:5044
+    image: docker.elastic.co/logstash/logstash:7.4.0
+    configs:
+      - source: logstash
+        target: /usr/share/logstash/pipeline/logstash.conf
+    networks:
+      - logs
+    deploy:
+      replicas: 1

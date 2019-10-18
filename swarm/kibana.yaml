@@ -1,0 +1,24 @@
+version: '3.3'
+
+networks:
+  logs:
+    driver: overlay
+    attachable: true
+
+configs:
+  logtrail:
+    file: ./logtrail.json
+
+services:
+  kibana:
+    image: coffeespiller/kibana:7.4.0
+    configs:
+      - source: logtrail
+        target: /opt/kibana/plugins/logtrail/logtrail.json
+    networks:
+      - logs
+    environment:
+      SERVER_NAME: localhost
+      ELASTICSEARCH_HOSTS: http://elasticsearch1:9200/
+    ports:
+      - 5601:5601

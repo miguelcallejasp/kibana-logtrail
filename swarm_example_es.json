@@ -1,0 +1,62 @@
+{
+  "_index": "filebeat-7.4.0-2019.10.16",
+  "_type": "_doc",
+  "_id": "_-Km1m0BgQSWpd_NAYg7",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "ecs": {
+      "version": "1.1.0"
+    },
+    "tags": [
+      "beats_input_codec_plain_applied"
+    ],
+    "input": {
+      "type": "docker"
+    },
+    "message": "2019-10-16T22:17:41.655+0000 I NETWORK  [conn138] end connection 10.0.2.5:52014 (25 connections now open)",
+    "agent": {
+      "hostname": "3e731cbfaf5a",
+      "id": "60ef1c00-6348-423e-9234-5c903e7fcba5",
+      "version": "7.4.0",
+      "type": "filebeat",
+      "ephemeral_id": "6f43c905-a5aa-455a-8d5f-188ba6a63bf6"
+    },
+    "log": {
+      "offset": 151364,
+      "file": {
+        "path": "/usr/share/dockerlogs/data/68e0e2b172d7e48cef712e0c3f1d8cec376fba8512a52ff4c8ad67ca657e80cb/68e0e2b172d7e48cef712e0c3f1d8cec376fba8512a52ff4c8ad67ca657e80cb-json.log"
+      }
+    },
+    "container": {
+      "image": {
+        "name": "mongo:4.0@sha256:60df636a75d64a59834605ee6c4f669ddcb10ded2beee5f5805da7dfab61b1ad"
+      },
+      "id": "68e0e2b172d7e48cef712e0c3f1d8cec376fba8512a52ff4c8ad67ca657e80cb",
+      "name": "vizix_mongo.1.cbwc1gz3nkyesxg44wo5de9tu",
+      "labels": {
+        "com_docker_stack_namespace": "vizix",
+        "com_docker_swarm_service_id": "3byc86lfnztbsul6ekiw7fq63",
+        "com_docker_swarm_task": "",
+        "com_docker_swarm_task_id": "cbwc1gz3nkyesxg44wo5de9tu",
+        "com_docker_swarm_node_id": "j0o51vdczk1aravxnqclwbab3",
+        "com_docker_swarm_service_name": "vizix_mongo",
+        "com_docker_swarm_task_name": "vizix_mongo.1.cbwc1gz3nkyesxg44wo5de9tu"
+      }
+    },
+    "@version": "1",
+    "stream": "stdout",
+    "host": {
+      "name": "3e731cbfaf5a"
+    },
+    "@timestamp": "2019-10-16T22:17:41.655Z"
+  },
+  "fields": {
+    "@timestamp": [
+      "2019-10-16T22:17:41.655Z"
+    ]
+  },
+  "sort": [
+    1571264261655
+  ]
+}

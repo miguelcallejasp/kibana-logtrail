@@ -1,0 +1,16 @@
+logs.mojix.cloud:80 {
+    redir https://{host}{uri}
+}
+
+logs.mojix.cloud:443 {
+  tls infrastructure@mojix.com
+  gzip
+  log / stdout "{remote} - [{when}] \"{method} {uri} {proto}\" Response: {status} Size: {size} Latency: {latency_ms}"
+  errors stderr
+  timeouts 2h
+
+  proxy / kibana:5601 {
+    policy round_robin
+    transparent
+  }
+}
